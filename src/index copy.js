@@ -1,4 +1,4 @@
-const { Client, MessageMedia} = require('../lib/whatsapp-web.js/index.js');
+const { Client, MessageMedia} = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const { syncBuiltinESMExports } = require('module');
 
@@ -12,28 +12,69 @@ const contactos = {
     }
 };
 
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+function realizarAccion(opcion) {
+    switch (opcion) {
+      case '1':
+        console.log('Realizando acción 1: Mandar mensaje');
+        // Agrega aquí la lógica para mandar un mensaje
+        break;
+      case '2':
+        console.log('Realizando acción 2: Mandar cedula');
+        // Agrega aquí la lógica para mandar una cédula
+        break;
+      case '3':
+        console.log('Realizando acción 3: Mandar archivo');
+        // Agrega aquí la lógica para mandar un archivo
+        break;
+      case '4':
+        console.log('Realizando acción 4: Mandar imagen');
+        // Agrega aquí la lógica para mandar una imagen
+        break;
+      case '0':
+        console.log('Saliendo del programa.');
+        rl.close(); // Cierra la interfaz readline y finaliza el programa
+        return;
+      default:
+        console.log('Opción no válida. Por favor, elige una opción válida.');
+    }
+}
+
+function mostrarMenu() {
+    console.log('------- MENU BOT -------');
+    console.log('[1] Mandar mensaje');
+    console.log('[2] Mandar cedula');
+    console.log('[3] Mandar mandar archivo');
+    console.log('[4] Mandar imagen');
+    console.log('[0] Salir');
+  
+    rl.question('Elige una opción: ', (opcion) => {
+      realizarAccion(opcion);
+  
+      rl.question('¿Deseas realizar otra acción? (S/N): ', (respuesta) => {
+        if (respuesta.toLowerCase() === 's') {
+          // Si el usuario quiere realizar otra acción, muestra el menú nuevamente
+          main();
+        } else {
+          console.log('Saliendo del programa.');
+          rl.close(); // Cierra la interfaz readline y finaliza el programa
+        }
+      });
+    });
+  }
 
 client.on('qr', (qrCode) => {
     qrcode.generate(qrCode, { small: true });
 });
 
 client.on('ready', () => {
-    console.log('WhatsApp Web está listo!\n');
+    mostrarMenu();
 
-    console.log('------- MENU BOT -------\n');
-    console.log('[1] Mandar mensaje\n');
-    console.log('[2] Mandar cedula\n');
-    console.log('[3] Mandar mandar archivo\n');
-    console.log('[4] Mandar imagen\n');
-
-    
-    
-
-
-
-
-
-//   enviarMensajesPers();
 }); 
 
 function enviarCedulas(chatId, unidad){
@@ -46,39 +87,6 @@ function enviarCedulas(chatId, unidad){
     }).catch((error) => {
         console.error('Error al enviar cedula a', chatId);
     });
-}
-
-function enviarImagen(chatId){
-    const imagen = MessageMedia.fromFilePath('./carnet.jpeg');
-
-    client.sendMessage(chatId, imagen).then((response) => {
-        console.log('Imagen enviada con éxito a', chatId);
-    }).catch((error) => {
-        console.error('Error al imagen a', chatId);
-    });
-}
-
-function enviarMensaje(chatId, mensajeTexto){
-    const mensajeTexto = 'Hola, soy un bot';
-
-    client.sendMessage(chatId, mensajeTexto).then((response) => {
-        console.log('Mensaje enviado con éxito a', chatId);
-    }).catch((error) => {
-        console.error('Error al enviar el mensaje a', chatId);
-    });
-}
-
-function enviarMensajesPers(){
-
-    for(const unidad in contactos) {
-        let chatId = country_code + contactos[unidad].telefono + "@c.us";
-        let nombreLider = contactos[unidad].nombre;
-
-            
-        enviarMensaje(chatId);
-        enviarCedulas(chatId, unidad);
-        //enviarImagen(chatId);
-    }
 }
 
 client.initialize();

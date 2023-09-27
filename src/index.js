@@ -1,4 +1,4 @@
-const { Client, MessageMedia} = require('../lib/whatsapp-web.js/index.js');
+const { Client, MessageMedia} = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const { syncBuiltinESMExports } = require('module');
 
@@ -8,7 +8,7 @@ const country_code = "521";
 // const contactos = {
 //     "28 DE ENERO": {
 //         nombre: "Victor",
-//         telefono: "3314112084"
+//         telefono: "3314175846"
 //     }
 // };
 
@@ -133,9 +133,9 @@ client.on('ready', () => {
 }); 
 
 function enviarCedulas(chatId, unidad){
-    // let ced = MessageMedia.fromFilePath(`./Docs/CEDS_ENVIO/${unidad}.pdf`);
-    // let ced = MessageMedia.fromFilePath(`./Docs/RETO/${unidad}.pdf`);
-    let ced = MessageMedia.fromFilePath(`./Docs/CUBETON/${unidad}.pdf`);
+    // let ced = MessageMedia.fromFilePath(`CEDS_ENVIO/${unidad}.pdf`);
+    // let ced = MessageMedia.fromFilePath(`../docs/RETO/${unidad}.pdf`);
+    let ced = MessageMedia.fromFilePath(`../docs/RETO2/${unidad}.pdf`);
 
     client.sendMessage(chatId, ced).then((response) => {
         console.log('Cedula enviada con éxito a', chatId);
@@ -143,6 +143,7 @@ function enviarCedulas(chatId, unidad){
         console.error('Error al enviar cedula a', chatId);
     });
 }
+
 
 function enviarImagen(chatId){
     const imagen = MessageMedia.fromFilePath('./carnet.jpeg');
@@ -170,25 +171,16 @@ function enviarMensajesPers(){
 
 //         let mensajeTexto = `¡Hola a ${nombreLider}! 👋🌟
 
-// 🌈 Quería recordarte que hoy es el día de la entrega de nuestras cédulas de ventas y metas`;
+// 🌈 Me disculpo por la ausencia de la semana pasada. Hoy es el día de la entrega de nuestro seguimiento de ventas y promociones.`;
 
-//         let mensajeTexto = `También, quería compartirte el increíble trabajo en la promoción "Rompe Récord". 📈🚀
-
-// Quiero recordarte que esta promoción está a punto de terminar, pero no perdamos la esperanza. Aún tenemos una oportunidad para alcanzar nuestra meta si te activas en el reenvío y seguimos trabajando juntos en equipo. 💪✨
-
-// Para aclarar algunas dudas, 
-// *TL SEM36* es la *Venta Total de la Sem 36*. 
-
-// *TOTAL* es la *venta total de este TupperTips*.
-
-// *UM AC* es el *numero de actividades que tuvo en ese TupperTips*`;
-
-        let mensajeTexto = `Por ultimo, estoy emocionado de anunciarte la próxima promoción del "Cubetón", vigente semanas 36 y 37. Tu liderazgo es clave, y te animo a activar a tu equipo para ganar esos codiciados cubetones. 
-        
-*RECUERDA* Si tienes alguna duda sobre las promociones o cedulas, no dudes en hacérmelo saber. ¡Vamos a por ello!!`
+        // let mensajeTexto = `*📊CEDULAS📊* - Resumen de Venta y Meta Nvo Vallarta.`;
+        // let mensajeTexto = `Buenas noches, una disculpa por comunicarme a esta hora. Lo hago principalmente para comentarte que hubo un error en el Rompe Record, así que se las volveré a enviar.`;
+        // let mensajeTexto = `*1️⃣ROMPE RECORD1️⃣* - Chicas que lograron la Primera Etapa, continuan con la Segunda Etapa.`;
+        let mensajeTexto = `*2️⃣ROMPE RECORD2️⃣* - Nueva Generación, chicas que no lograron entrar a la Primera Etapa, pero participan en el Rompe Record II.`;
             
         enviarMensaje(chatId, mensajeTexto);
         enviarCedulas(chatId, unidad);
+        
         //enviarImagen(chatId);
     }
 }
