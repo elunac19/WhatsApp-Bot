@@ -227,6 +227,7 @@ function sendFile(fileOption, filemessage){
   }
 }
 
+
 function selectFileOption(selectActionCallback){
   console.log('[1] Cedulas');
   console.log('[2] Rompe Record I');
