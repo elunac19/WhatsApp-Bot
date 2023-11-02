@@ -1,0 +1,29 @@
+2023/11/01-18:29:24.113 a103 Reusing MANIFEST /Users/elunac19/Desktop/PROGRAMACION/WhatsApp-Bot/src/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/11/01-18:29:24.114 a103 Recovering log #2649
+2023/11/01-18:29:24.121 a103 Reusing old log /Users/elunac19/Desktop/PROGRAMACION/WhatsApp-Bot/src/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/002649.log 
+2023/11/01-18:29:37.168 15f07 Compacting 1@1 + 11@2 files
+2023/11/01-18:29:37.193 15f07 Generated table #2675@1: 3726 keys, 2153928 bytes
+2023/11/01-18:29:37.213 15f07 Generated table #2676@1: 3369 keys, 2147863 bytes
+2023/11/01-18:29:37.235 15f07 Generated table #2677@1: 3810 keys, 2151207 bytes
+2023/11/01-18:29:37.256 15f07 Generated table #2678@1: 3874 keys, 2149715 bytes
+2023/11/01-18:29:37.276 15f07 Generated table #2679@1: 3865 keys, 2150395 bytes
+2023/11/01-18:29:37.323 15f07 Generated table #2680@1: 25643 keys, 2188578 bytes
+2023/11/01-18:29:37.373 15f07 Generated table #2681@1: 49619 keys, 2240283 bytes
+2023/11/01-18:29:37.420 15f07 Generated table #2682@1: 30688 keys, 2271062 bytes
+2023/11/01-18:29:37.469 15f07 Generated table #2683@1: 32658 keys, 2264112 bytes
+2023/11/01-18:29:37.519 15f07 Generated table #2684@1: 28678 keys, 2267330 bytes
+2023/11/01-18:29:37.524 15f07 Generated table #2685@1: 69 keys, 5105 bytes
+2023/11/01-18:29:37.524 15f07 Compacted 1@1 + 11@2 files => 21989578 bytes
+2023/11/01-18:29:37.530 15f07 compacted to: files[ 0 1 52 0 0 0 0 ]
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2638
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2639
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2623
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2637
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2636
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2634
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2635
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2624
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2632
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2633
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2640
+2023/11/01-18:29:37.531 15f07 Delete type=2 #2652

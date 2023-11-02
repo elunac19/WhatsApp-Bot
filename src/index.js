@@ -37,14 +37,10 @@ const contactos = {
         nombre: "Cynthia",
         telefono: "3310935078"
     },
-    "CORAZON": {
-        nombre: "Nora",
-        telefono: "3841083282"
-    },
-    "DESAFIO": {
-        nombre: "Elda",
-        telefono: "3338157461"
-    },
+    // "CORAZON": {
+    //     nombre: "Nora",
+    //     telefono: "3841083282"
+    // },
     "EMYORO": {
         nombre: "Rosaura",
         telefono: "3315205802"
@@ -176,10 +172,10 @@ function enviarMensajesPers(){
         // let mensajeTexto = `*📊CEDULAS📊* - Resumen de Venta y Meta Nvo Vallarta.`;
         // let mensajeTexto = `Buenas noches, una disculpa por comunicarme a esta hora. Lo hago principalmente para comentarte que hubo un error en el Rompe Record, así que se las volveré a enviar.`;
         // let mensajeTexto = `*1️⃣ROMPE RECORD1️⃣* - Chicas que lograron la Primera Etapa, continuan con la Segunda Etapa.`;
-        let mensajeTexto = `*2️⃣ROMPE RECORD2️⃣* - Nueva Generación, chicas que no lograron entrar a la Primera Etapa, pero participan en el Rompe Record II.`;
+        let mensajeTexto = `Una disculpa, parece ser que cometí un error al calcular los Rompe Record. Les pido una disculpa y en breve les enviaré su información corregida. Cualquier cosa, no duden en preguntarme. `;
             
         enviarMensaje(chatId, mensajeTexto);
-        enviarCedulas(chatId, unidad);
+        // enviarCedulas(chatId, unidad);
         
         //enviarImagen(chatId);
     }
