@@ -17,170 +17,170 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-const contactos = {
+const contacts = {
     "CASTILLO_M": {
-      nombre: "Liliana",
-      telefono: "3339475170"
+      name: "Liliana",
+      phone: "3339475170"
     },
     "CECY_M": {
-      nombre: "Cecy",
-      telefono: "13861036000"
+      name: "Cecy",
+      phone: "13861036000"
     },
     "DALIAS_M": {
-      nombre: "Mary",
-      telefono: "3312197116"
+      name: "Mary",
+      phone: "3312197116"
     },
     "DESCUBRE_M": {
-      nombre: "Silvia",
-      telefono: "3322506214"
+      name: "Silvia",
+      phone: "3322506214"
     },
     "LIDIA_M": {
-      nombre: "Lilia",
-      telefono: "13921001003"
+      name: "Lilia",
+      phone: "13921001003"
     },
     "LUPITA 2_M": {
-      nombre: "Bertha",
-      telefono: "3314116538"
+      name: "Bertha",
+      phone: "3314116538"
     },
     "MARISOL I_M": {
-      nombre: "Marisol",
-      telefono: "3316922969"
+      name: "Marisol",
+      phone: "3316922969"
     },
     "NANCY_M": {
-      nombre: "Nancy",
-      telefono: "3841123686"
+      name: "Nancy",
+      phone: "3841123686"
     },
     "NATALI CG_M": {
-      nombre: "Sra. Chuy",
-      telefono: "3331313021"
+      name: "Sra. Chuy",
+      phone: "3331313021"
     },
     "NAZARET_M": {
-      nombre: "Martha",
-      telefono: "3314382260"
+      name: "Martha",
+      phone: "3314382260"
     },
     "PERLA_M": {
-      nombre: "Ana",
-      telefono: "3310061258"
+      name: "Ana",
+      phone: "3310061258"
     },
     "RISUEÑOS_M": {
-      nombre: "Clau",
-      telefono: "3334596028"
+      name: "Clau",
+      phone: "3334596028"
     },
     "ROSALES_M": {
-      nombre: "Guillermina",
-      telefono: "3741029658"
+      name: "Guillermina",
+      phone: "3741029658"
     },
     "YULIANA_M": {
-      nombre: "Genoveva",
-      telefono: "3787862592"
+      name: "Genoveva",
+      phone: "3787862592"
     },
     "28 DE ENERO": {
-        nombre: "Tirza",
-        telefono: "3334475593"
+        name: "Tirza",
+        phone: "3334475593"
     },
     "AGUILA": {
-        nombre: "Vicky",
-        telefono: "3334734202"
+        name: "Vicky",
+        phone: "3334734202"
     },
     "ALCATRAZ": {
-        nombre: "Martha",
-        telefono: "3319722981"
+        name: "Martha",
+        phone: "3319722981"
     },
     "ANGELL": {
-        nombre: "Alma",
-        telefono: "3321081629"
+        name: "Alma",
+        phone: "3321081629"
     },
     "ARCOIRIS": {
-        nombre: "Elena",
-        telefono: "3334000135"
+        name: "Elena",
+        phone: "3334000135"
     },
     "CAMILA": {
-        nombre: "Cynthia",
-        telefono: "3310935078"
+        name: "Cynthia",
+        phone: "3310935078"
     },
     "CORAZON": {
-        nombre: "Nora",
-        telefono: "3841083282"
+        name: "Nora",
+        phone: "3841083282"
     },
     "EMYORO": {
-        nombre: "Rosaura",
-        telefono: "3315205802"
+        name: "Rosaura",
+        phone: "3315205802"
     },
     "EXITO": {
-        nombre: "Maury",
-        telefono: "3338148507"
+        name: "Maury",
+        phone: "3338148507"
     },
     "FENIX": {
-        nombre: "Martha",
-        telefono: "3327860871"
+        name: "Martha",
+        phone: "3327860871"
     },
     "GIRASOLES": {
-        nombre: "Tere",
-        telefono: "3334688082"
+        name: "Tere",
+        phone: "3334688082"
     },
     "GRANDESA": {
-        nombre: "Lupita",
-        telefono: "3334470497"
+        name: "Lupita",
+        phone: "3334470497"
     },
     "JUAN PABLO": {
-        nombre: "Esther",
-        telefono: "3314552620"
+        name: "Esther",
+        phone: "3314552620"
     },
     "GRATITUD": {
-        nombre: "Clau",
-        telefono: "3316155687"
+        name: "Clau",
+        phone: "3316155687"
     },
     "LUPITA": {
-        nombre: "Elba",
-        telefono: "3314187627"
+        name: "Elba",
+        phone: "3314187627"
     },
     "MARGARITAS": {
-      nombre: "Maggie",
-      telefono: "3314866473"
+      name: "Maggie",
+      phone: "3314866473"
     },
     "MAYA": {
-        nombre: "Ale",
-        telefono: "3313079272"
+        name: "Ale",
+        phone: "3313079272"
     },
     "MERAKI": {
-        nombre: "Maria",
-        telefono: "3881014832"
+        name: "Maria",
+        phone: "3881014832"
     },
     "NOVA": {
-        nombre: "Gris",
-        telefono: "3314175846"
+        name: "Gris",
+        phone: "3314175846"
     },
     "NUEVO AMANECER": {
-        nombre: "Vero",
-        telefono: "3171205613"
+        name: "Vero",
+        phone: "3171205613"
     },
     "ORQUIDEA": {
-        nombre: "Chely",
-        telefono: "3325368781"
+        name: "Chely",
+        phone: "3325368781"
     },
     "PALOMA": {
-        nombre: "Blanquita",
-        telefono: "3411379719"
+        name: "Blanquita",
+        phone: "3411379719"
     },
     "RENACIMIENTO": {
-        nombre: "Erika",
-        telefono: "3481167844"
+        name: "Erika",
+        phone: "3481167844"
     },
     "RESPLANDOR": {
-        nombre: "Paty",
-        telefono: "3751460106"
+        name: "Paty",
+        phone: "3751460106"
     },
     "SATELITE": {
-        nombre: "Rosy",
-        telefono: "3319180331"
+        name: "Rosy",
+        phone: "3319180331"
     },
     "YARETZY": {
-        nombre: "Clau",
-        telefono: "3751313649"
+        name: "Clau",
+        phone: "3751313649"
     },
     "ZOE": {
-        nombre: "Martha",
-        telefono: "3317642629"
+        name: "Martha",
+        phone: "3317642629"
     }
   };
 
